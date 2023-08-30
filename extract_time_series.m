@@ -1,9 +1,12 @@
 
+% This script is used to generate EEG time series from REM states. 
+% Input file is the structure array "EEG" (when the time series is imported using EEGLab GUI the array appears in the workspace)
+% The output file is the structure array "REM_single" 
+
 %% Load EEG data using EEGLAB GUI
 
-% once EEG data file is opened using EEGLAB toolbox press green button to
-% have the output folders which contain EEG time series from REM states
-% from channel T7 and T8
+% Once EEG data file is opened using EEGLAB toolbox, press green button "RUN" to generate the output which contain 
+% REM time series from channel T7 and T8 (REM_single)
 
 %% Extract indices of relevant states from Scores table 
 scores = EEG.event;
@@ -65,7 +68,6 @@ for i = 1:length(ii1)-1
         end
 end
 
-
 %% extract time series from channel T7
 chan = 'T7'; % channel to analyse
 eeg_T7 = EEG.data (find (strcmpi({EEG.chanlocs.labels},chan)==true),:);
@@ -119,7 +121,18 @@ output.REM_T7 = REM_T7;
 output.REM_T8 = REM_T8;
 REM_single = output; 
 
-clearvars -except REM_single
+clearvars -except REM_single 
 
-% save REM_single structure array for the next step
+% REM_single array contains time series from REM states for T7 (T3) and T8
+% (T4) channels. The array has two fields: one field for T7 and the other
+% field is for T8 REM time series. Each field contains a cell array with
+% one column and "n" number of rows where the number of rows indicate the
+% number of time REM state was detected in the recording. For example if,
+% in the recording, two REM states were detected then the cell arrays in
+% each field of the REM_single structure array will have one column and two
+% rwos. Each row is a double array that contains time series from the REM state. 
 
+% save REM_single structure array for the next step (script "REM_series")
+save('C:\Users\cigde\MATLAB Drive\baby EEG\Baby Files\scripts for manuscript\GITHUB\REM_single.mat');
+
+%% end
