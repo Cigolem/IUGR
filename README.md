@@ -26,3 +26,11 @@ Input files are:
             % frequency spectrum to use for PSD plotting (freq_PSD)
 Output is the plot showing PSD estimate in both groups
 
+Fuction 2: spectral_single
+This function is used to perform spectral analysis on an input EEG time series, which is multiple REM series (each lasting 30 sec)
+
+Script 5: spectral_analysis
+% This script is used to calculate power at delta, theta and alpha_beta frequency ranges from multiple epochs REM time series from all control and FGR subjects from T7/T8 channels separetly and the average power from both channels. 
+% Input files are multiple epoched REM time series from all control and  FGR groups from both channels
+% Output files are cell arrays that contain absolute powers at each of the three frequency ranges seprately from T7 / T8 channels (spectral_control) and their average power (spectral_control_av)
+% For generating delta/theta/alpha_beta spectral powers for the FGRgroup, simply change the name from control to FGR throughout the script
