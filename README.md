@@ -34,3 +34,9 @@ Script 5: spectral_analysis
 % Input files are multiple epoched REM time series from all control and  FGR groups from both channels
 % Output files are cell arrays that contain absolute powers at each of the three frequency ranges seprately from T7 / T8 channels (spectral_control) and their average power (spectral_control_av)
 % For generating delta/theta/alpha_beta spectral powers for the FGRgroup, simply change the name from control to FGR throughout the script
+
+Script 6: TTA_detec: 
+% This script is used to determine TTA events in eeg time series extracted from REM states
+% Input files are single REM time series (not epoched) from all control and  FGR groups from T7 channels
+% Output files are structure arrays (TTA_final) that contain information on different features of TTA events  (amplitude, density, time series, durations etc..)
+
