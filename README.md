@@ -54,6 +54,7 @@ It is modified from MX Cohen's lecture on "Multivariate cross-frequency coupling
 Input file is the eeg signal; output file is the vector array that contains z-scored MIs
 
 R Codes
+
 Script 8: plot_trajectories
 This script is used to generate plots for trajectories for different variables including body weight, head circumference and doppler paramaters. 
 Input files are data farmes that contain HC, BW and Doppler data 
