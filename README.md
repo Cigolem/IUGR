@@ -1,5 +1,5 @@
 # IUGR
-Codes for IUGR Manuscript - MATLAB
+MATLAB Codes 
 
 Script 1: extract_time_series
 This script is used to generate EEG time series from REM states. The Input file is the structure array "EEG" (when the time series is imported using EEGLab GUI the array appears in the workspace). The output file is the structure array "REM_single".
@@ -30,13 +30,26 @@ Fuction 2: spectral_single
 This function is used to perform spectral analysis on an input EEG time series, which is multiple REM series (each lasting 30 sec)
 
 Script 5: spectral_analysis
-% This script is used to calculate power at delta, theta and alpha_beta frequency ranges from multiple epochs REM time series from all control and FGR subjects from T7/T8 channels separetly and the average power from both channels. 
-% Input files are multiple epoched REM time series from all control and  FGR groups from both channels
-% Output files are cell arrays that contain absolute powers at each of the three frequency ranges seprately from T7 / T8 channels (spectral_control) and their average power (spectral_control_av)
-% For generating delta/theta/alpha_beta spectral powers for the FGRgroup, simply change the name from control to FGR throughout the script
+This script is used to calculate power at delta, theta and alpha_beta frequency ranges from multiple epochs REM time series from all control and FGR subjects from T7/T8 channels separetly and the average power from both channels. 
+Input files are multiple epoched REM time series from all control and  FGR groups from both channels
+Output files are cell arrays that contain absolute powers at each of the three frequency ranges seprately from T7 / T8 channels (spectral_control) and their average power (spectral_control_av)
+For generating delta/theta/alpha_beta spectral powers for the FGRgroup, simply change the name from control to FGR throughout the script
 
 Script 6: TTA_detect: 
-% This script is used to determine TTA events in eeg time series extracted from REM states
-% Input files are single REM time series (not epoched) from all control and  FGR groups from T7 channels
-% Output files are structure arrays (TTA_final) that contain information on different features of TTA events  (amplitude, density, time series, durations etc..)
+This script is used to determine TTA events in eeg time series extracted from REM states
+Input files are single REM time series (not epoched) from all control and  FGR groups from T7 channels
+Output files are structure arrays (TTA_final) that contain information on different features of TTA events  (amplitude, density, time series, durations etc..)
 
+Script 7: PAC_arrays
+This script is used to generate modulation index for assessing the strength of phase amplitude coupling between two frequency bands in REM sleep. 
+The script uses the function "PAC_compute" to calculate z scores for MIs.
+Input files: eeg_PAC_Control (or FGR) workspaces that contain eeg time series for each TTA event for each baby (time series of TTA events that have one second additional data from each side) 
+Output files: 
+            PAC_Control_final (or FGR) 3D arrays that contain MI for the given frequency range for each of the TTA event
+            Plots showing MI (z-scored) for each group
+
+Function 3: PAC_compute
+This function is used to determine the strength of the Phase Amplitude Coupling between a range for lower (phase) and higher (amplitude) frequencies. 
+It is modified from MX Cohen's lecture on "Multivariate cross-frequency coupling". 
+Input file is the eeg signal; output file is the vector array that contains z-scored MIs
+ 
