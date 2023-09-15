@@ -1,7 +1,8 @@
 function [phaseamp] = PAC_compute(eeg)
-% This function is used to determine the strength of the Phase Amplitude Coupling between two frequency oscillations 
-% (modified from MX Cohen's lecture on "Multivariate cross-frequency coupling", COURSE: Advanced neuroscience techniques
-
+% This function is used to determine the strength of the Phase Amplitude Coupling between a range for lower (phase)
+% and higher (amplitude) frequencies. It is modified from MX Cohen's lecture on "Multivariate cross-frequency coupling". 
+% Input file is the eeg signal; output file is the vector array that contains z-scored MIs
+ 
 %% Set parameters
 srate = 500;
 npnts = length(eeg);
