@@ -60,7 +60,14 @@ This script is used to generate plots for trajectories for different variables i
 Input files are data frames that contain HC, BW and Doppler data 
 Output files are lineplots that represent deveopmental trajectories in control and FGR group
 
-Script 9: # EEG_regression
+Script 9: EEG_regression
 This script is used to perform regression analyses between delta / theta / alpha_beta FFT power, TTA burst power, TTA burst rate and FGR disease status and FGR severity as indexed by UA/MCA PI ratio.
 Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density, doppler features
 Outputs are the AIC values, beta coefficient estimates, confidence intervals for beta coefficients and p values for various models tests to predict the effect of FGR disease status and disease severity on various EEG parameters
+
+Script 10: EEG_residuals
+This script is used to:
+          generate violin plots of z-scored residuals for delta, theta, alpha_beta FFT power, TTA burst rate and burst power after controlling for CGA and PNA in FGR vs. controls; 
+          generate line plots of z-scored residuals for the same EEG features against UA/MCA ratio after controlling for CGA, PNA and GA_Doppler.
+Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density, doppler features
+Outputs are violin and line plots of z-scored residuals
