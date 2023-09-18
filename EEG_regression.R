@@ -3,7 +3,7 @@
 # Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density, 
 # doppler features
 # Outputs are AIC values, beta coefficient estimates, confidence intervals for beta coefficients and p values for
-# various models tests to predict the effect of FGR disease status and disease severity on various EEG parameters
+# various models to predict the effect of FGR disease status and disease severity on various EEG parameters
 
 library(plotrix)
 library(dplyr)
