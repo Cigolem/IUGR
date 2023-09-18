@@ -63,7 +63,7 @@ Outputs are line plots of developmental trajectories against weeks since concept
 Script 9: EEG_regression
 This script is used to perform regression analyses between delta / theta / alpha_beta FFT power, TTA burst power, TTA burst rate and FGR disease status and FGR severity as indexed by UA/MCA PI ratio.
 Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density, doppler features
-Outputs are the AIC values, beta coefficient estimates, confidence intervals for beta coefficients and p values for various models tests to predict the effect of FGR disease status and disease severity on various EEG parameters
+Outputs are the AIC values, beta coefficient estimates, confidence intervals for beta coefficients and p values for various models tests to predict the effect of FGR disease status and disease severity on EEG parameters
 
 Script 10: EEG_residuals
 This script is used to:
@@ -76,4 +76,9 @@ Script 11: plot_EEG
 This script is used to generate line plots for EEG features (FFT powers and TTA burst rate / power) against CGA (Corrected Gestational Age)
 Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density,CGA 
 Outputs are line plots of EEG features against CGA in control and FGR group
+
+Script 12: Trajectory_regression
+This script is used to perform regression analyses between developmental features (body weight, height circumferance, doppler features) and FGR disease status (early and late onset FGR compared to control group)
+Input files are data frames that contain values for these trajectories; i.e. BW, HC and Doppler data frames
+Outputs are AIC values, beta coefficient estimates, confidence intervals for beta coefficients and p values for various models to predict the effect of FGR disease status on trajectories
 
