@@ -1,8 +1,9 @@
 
 ## This script is used to generate plots for trajectories for different variables including body weight, 
-# head circumference and doppler paramaters. 
+# head circumference and Doppler parameters. 
 # Input files are data frames that contain HC, BW and Doppler data 
-# Output files are line plots that represent developmental trajectories in control and FGR group
+# Outputs are line plots of developmental trajectories against weeks since conception (antenatal / postnatal weeks)
+# in control and FGR group
 
 library(ggplot2)
 library(cowplot)
