@@ -57,7 +57,10 @@ R Codes
 
 Script 8: plot_trajectories
 This script is used to generate plots for trajectories for different variables including body weight, head circumference and doppler paramaters. 
-Input files are data farmes that contain HC, BW and Doppler data 
+Input files are data frames that contain HC, BW and Doppler data 
 Output files are lineplots that represent deveopmental trajectories in control and FGR group
 
-
+Script 9: # EEG_regression
+This script is used to perform regression analyses between delta / theta / alpha_beta FFT power, TTA burst power, TTA burst rate and FGR disease status and FGR severity as indexed by UA/MCA PI ratio.
+Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density, doppler features
+Outputs are the AIC values, beta coefficient estimates, confidence intervals for beta coefficients and p values for various models tests to predict the effect of FGR disease status and disease severity on various EEG parameters
