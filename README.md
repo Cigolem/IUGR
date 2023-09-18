@@ -56,9 +56,9 @@ Input file is the eeg signal; output file is the vector array that contains z-sc
 R Codes
 
 Script 8: plot_trajectories
-This script is used to generate plots for trajectories for different variables including body weight, head circumference and doppler paramaters. 
+This script is used to generate plots for trajectories for different variables including body weight, head circumference and Doppler parameters. 
 Input files are data frames that contain HC, BW and Doppler data 
-Output files are lineplots that represent deveopmental trajectories in control and FGR group
+Outputs are line plots of developmental trajectories against weeks since conception (antenatal / postnatal weeks) in control and FGR group
 
 Script 9: EEG_regression
 This script is used to perform regression analyses between delta / theta / alpha_beta FFT power, TTA burst power, TTA burst rate and FGR disease status and FGR severity as indexed by UA/MCA PI ratio.
@@ -71,3 +71,9 @@ This script is used to:
           generate line plots of z-scored residuals for the same EEG features against UA/MCA ratio after controlling for CGA, PNA and GA_Doppler.
 Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density, doppler features
 Outputs are violin and line plots of z-scored residuals
+
+Script 11: plot_EEG
+This script is used to generate line plots for EEG features (FFT powers and TTA burst rate / power) against CGA (Corrected Gestational Age)
+Input file is data frame that contain FFT powers at delta, theta, alpha_beta range, TTA burst power and density,CGA 
+Outputs are line plots of EEG features against CGA in control and FGR group
+
